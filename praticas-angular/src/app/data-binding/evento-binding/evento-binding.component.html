@@ -1,0 +1,66 @@
+<div class="w-full">
+  <h2 class="text-2xl font-medium flex justify-start">
+    Event Binding
+  </h2>
+  <div class="p-4 grid grid-cols-2 gap-10 ">
+    <div class="pratica09">
+      <h4 class="font-medium text-xl">
+        pratica 09: mensagem por botão
+      </h4>
+      <div class="w-full  border-2 border-solid border-grayCustom-200 rounded-lg shadow-md p-1">
+        <p class="text-lg font-medium  flex justify-center items-center w-full h-12">
+          {{ mensage }}
+        </p>
+        <button (click)="clickButton()"
+                class="w-full h-12 bg-grayCustom-200 hover:bg-grayCustom-300 active:bg-grayCustom-400 transition-all duration-150 rounded">
+          Clica Aqui
+        </button>
+      </div>
+    </div>
+
+    <div class="pratica10">
+      <h4 class="font-medium text-xl">
+        pratica 10: Capturar Valor de um input
+      </h4>
+      <div class="w-full  border-2 border-solid border-grayCustom-200 rounded-lg shadow-md p-1 flex flex-col gap-1">
+        <input #campoInput
+               (blur)="valorInput(campoInput.value)"
+               (keyup.enter)="valorInput(campoInput.value)"
+               class="w-full h-12 border-2 border-solid border-grayCustom-100 p-2 rounded outline-1 outline-grayCustom-200"
+               placeholder="Digite alguma mensagem"
+        >
+        <p class="w-full h-12 text-lg font-medium flex items-center justify-center bg-grayCustom-100 rounded">
+          {{ mensageInput }}
+        </p>
+      </div>
+    </div>
+
+    <div class="pratica11">
+      <h4 class="font-medium text-xl">
+        Pratica 11: troca de texto
+      </h4>
+      <div class="w-full p-1 rounded-lg shadow-md border-2 border-solid border-grayCustom-200">
+        <button (click)="toggleText()"
+                class="w-full h-16 bg-grayCustom-200 hover:bg-grayCustom-300 active:bg-grayCustom-400 transition-all duration-150 font-medium text-lg rounded ">
+          {{ buttonText }}
+        </button>
+      </div>
+    </div>
+
+    <div class="pratica12">
+      <h4 class="font-medium text-xl">
+        Pratica 12: contador
+      </h4>
+      <div class="w-full border-2 border-solid border-gray-200 rounded-lg shadow-md p-1">
+        <p class="w-full h-12 flex justify-center items-center text-lg font-normal">
+          O botao foi clicado {{ contador }} vezes
+        </p>
+        <button (click)="incremantaValor()"
+                class="w-full h-12 bg-grayCustom-200 hover:bg-grayCustom-300 active:bg-grayCustom-400 transition-all duration-150 rounded font-medium text-lg  ">
+          Incrementar valor
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

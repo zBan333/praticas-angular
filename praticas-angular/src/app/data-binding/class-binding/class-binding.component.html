@@ -1,0 +1,89 @@
+<div class="w-full">
+  <h2 class="text-2xl font-medium flex justify-start">
+    Class e Style Binding
+  </h2>
+
+  <div class="p-4 grid grid-cols-2 gap-10">
+    <div class="pratica05">
+      <h4 class="font-medium text-xl">
+        Pratica 05: Trocando a cor da fonte
+      </h4>
+      <div class="w-full h-24  border-2 border-solid border-grayCustom-200 rounded-lg shadow-md">
+        <p [class.toggleText]="isRed"
+           class="h-12 w-full flex justify-center items-center text-lg font-semibold">
+          Esse Texto muda de cor
+        </p>
+        <button (click)="mudarCor()"
+                class="bg-grayCustom-200 rounded-b-lg h-12 w-full font-medium text-base ">
+          mudar a cor
+        </button>
+      </div>
+    </div>
+
+    <div class="pratica06">
+      <h4 class="font-medium text-xl">
+        pratica 06: Aumentando fonte
+      </h4>
+      <div class="w-full border-2 border-solid border-grayCustom-200 rounded-lg shadow-md">
+        <p [style.fontSize.px]="fontSize"
+           class="w-full h-12 flex justify-center items-center font-semibold">
+          Fonte dinamica
+        </p>
+        <div class="w-full grid grid-cols-2 gap-1 border-t-2 border-solid border-grayCustom-200 p-1">
+          <button (click)="aumentarFonte()"
+                  class="w-full h-11 bg-grayCustom-200 rounded hover:bg-grayCustom-300 active:bg-grayCustom-400 transition-all duration-200">
+            Aumentar
+          </button>
+          <button (click)="diminuirFonte()"
+                  class="w-full h-11 bg-grayCustom-200 rounded hover:bg-grayCustom-300 active:bg-grayCustom-400 transition-all duration-200">
+            Diminuir
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pratica07">
+      <h4 class="font-medium text-xl">
+        Pratica07: classes dinamicas
+      </h4>
+      <div class="w-full h-24  border-2 border-solid border-grayCustom-200 rounded-lg shadow-md">
+        <p [style.background-color]="isHighLight ? 'yellow' : 'transparent' "
+           class="h-12 w-full flex justify-center items-center font-semibold text-xl ">
+          Texto com destaque
+        </p>
+        <button (click)="mudarDestaque()"
+                class="bg-grayCustom-200 w-full h-11 rounded-b-md hover:bg-grayCustom-300 active:bg-grayCustom-400 transition-all duration-150">
+          Mudar destaque
+        </button>
+      </div>
+    </div>
+
+    <div class="pratica08">
+      <h4 class="font-medium text-xl">
+        Mudar cor de fundo
+        <div class="w-full  border-2 border-solid border-grayCustom-200 rounded-lg shadow-lg">
+          <div [style.backgroundColor]="bgColor"
+               class="w-full h-12 rounded-t border-b-2 border-solid border-gray-200 p-1">
+
+          </div>
+          <div class="w-full  grid grid-cols-3 gap-1 p-1 ">
+
+            <button (click)="mudarBgColor('red')"
+                    class="w-full bg-grayCustom-200 h-11 font-normal rounded hover:bg-grayCustom-300 active:bg-grayCustom-400 transition-all duration-150">
+              Vermelho
+            </button>
+            <button (click)="mudarBgColor('blue')"
+                    class="w-full bg-grayCustom-200 h-11 font-normal rounded hover:bg-grayCustom-300 active:bg-grayCustom-400 transition-all duration-150">
+              Azul
+            </button>
+            <button (click)="mudarBgColor('green')"
+                    class="w-full bg-grayCustom-200 h-11 font-normal rounded hover:bg-grayCustom-300 active:bg-grayCustom-400 transition-all duration-150">
+              Verde
+            </button>
+          </div>
+        </div>
+      </h4>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,104 @@
+<div class="w-full">
+  <h2 class="text-2xl font-medium flex justify-start">
+    Interpolação e Property binding
+  </h2>
+
+  <div class="p-4 grid grid-cols-2 gap-10">
+    <div class="pratica01">
+      <h4 class="font-medium text-xl">
+        Pratica 01: Perfil de usuario
+      </h4>
+      <div class="flex items-center w-full h-24 border-2 border-solid border-grayCustom-200 shadow-md rounded-lg">
+        <img [src]='userImage' class="h-24 w-24 border-r-2 border-solid border-grayCustom-200">
+        <div class="py-0 pl-3">
+          <p class="text-lg text-black font-bold">{{ userName }}</p>
+          <p class="text-secundary">{{ userAge }} </p>
+          <p class="text-secundary">{{ userWork }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pratica02">
+      <h4 class="font-medium text-xl">
+        Pratica 02: Relogio dinamico
+      </h4>
+      <div class="flex flex-col  h-24 shadow-md rounded-lg border-2 border-solid border-grayCustom-200 w-full">
+        <p class="flex justify-center items-center h-12 text-2xl">
+          {{ horaAtual }}
+        </p>
+        <button (click)="updateTime()" [disabled]="false"
+                class="bg-grayCustom-200 h-12 outline-none border-none py-2 px-3 text-base font-medium ">
+          Atualizar hora
+        </button>
+      </div>
+    </div>
+
+    <div class="pratica03">
+      <h4 class="font-medium text-xl">
+        Pratica 03: semaforo
+      </h4>
+
+      <div class="w-full flex flex-col items-center shadow-sm rounded-lg">
+        <div class="flex justify-evenly p-2 gap-2 bg-gray-600 rounded-t-lg w-full">
+          <div [style.backgroundColor]="corLampada == 'red' ? 'red' : 'gray'"
+               class="w-14 h-12 rounded-full">
+
+          </div>
+          <div [style.backgroundColor]="corLampada == 'yellow' ? 'yellow' : 'gray'"
+               class="w-14 h-12 rounded-full">
+
+          </div>
+          <div [style.backgroundColor]="corLampada == 'green' ? 'green' : 'gray'"
+               class="w-14 h-12 rounded-full">
+          </div>
+        </div>
+        <button (click)="mudarCor()"
+                class="bg-grayCustom-200 h-8 w-full outline-none border-none p-4 text-base font-medium rounded-b-lg flex justify-center items-center">
+          trocar de a cor da Lampada
+        </button>
+      </div>
+    </div>
+
+    <div class="pratica04">
+      <h4 class="text-xl font-medium">
+        Pratica 04: Card de Produtos
+      </h4>
+
+      <div class="shadow-xl rounded-lg w-96">
+        <div class="w-full flex justify-center items-center">
+          <img [src]="imagemProduto" class="rounded-t">
+        </div>
+        <div class="p-4">
+          <p class="text-2xl font-medium">
+            {{ nomeProduto }}
+          </p>
+          <p class="font-normal text-secundary text-base">
+            R${{ precoProduto }}
+          </p>
+          <p class="font-normal text-secundary text-base">
+            Intel I5 12400F Geforce RTX 4060 8GB
+            <br>
+            32GB ram SSD 1TB NVME H610M-G
+          </p>
+          <p class="font-normal text-xl mt-2">
+            {{ estoqueProduto ? 'disponiveis: ' + estoqueProduto : 'indisponivel' }}
+          </p>
+
+          <div class="mt-4 flex gap-4 items-center justify-start">
+            <button (click)="mudarValor()"
+                    class="h-12 py-2 px-3 border-none bg-transparent  text-base font-medium flex items-center justify-center rounded hover:bg-blue-500 hover:text-white transition-all duration-150 hover:shadow-lg active:bg-blue-900  active:shadow-lg">
+              Comprar
+            </button>
+            <button (click)="mudarValor()"
+                    class="h-12 py-2 px-3 border-none bg-transparent  text-base font-medium flex items-center justify-center rounded hover:bg-blue-500 hover:text-white transition-all duration-150 hover:shadow-lg active:bg-blue-900 active:shadow-lg">
+              Adicionar ao carrinho
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="w-full">
+  <h2 class="font-medium text-2xl flex justify-start">
+    Input Property
+  </h2>
+
+  <div class="p-4 grid grid-cols-2 gap-10">
+
+    <div class="pratica17">
+      <h4 class="font-medium text-xl">
+        Pratica 17: Texto com input Property
+      </h4>
+      <div class="flex items-center w-full h-24 border-2 border-solid border-grayCustom-200 shadow-md rounded-lg">
+        <app-text-display [text]="'Texto com input property'"
+        class="w-full h-24 flex justify-center items-center">
+      </app-text-display>
+      </div>
+    </div>
+
+    <div class="pratica18">
+      <h4 class="font-medium text-xl">
+        pratica 18: Alterando background
+      </h4>
+      <div class="w-full h-24 border-2 border-solid border-grayCustom-200 rounded-lg shadow-md flex flex-col gap-1 p-1">
+        <div class="w-full h-12 rounded">
+          <app-background [background]="'blue'"></app-background>
+        </div>
+        <div class="w-full h-12 rounded">
+          <app-background [background]="'green'"></app-background>
+        </div>
+      </div>
+    </div>
+
+    <div class="pratica19">
+      <h4 class="font-medium text-xl">
+        Exibir Lista de Itens
+      </h4>
+      <div class="w-full  border-2 border-solid border-grayCustom-200 rounded-lg shadow-md">
+        <app-item-list [items]="['Item 1','Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6']">
+        </app-item-list>
+      </div>
+    </div>
+
+    <div class="pratica20">
+      <h4 class="font-medium text-xl">
+        Controlar Visibilidade
+      </h4>
+      <div class="w-full border-2 border-solid border-grayCustom-200 rounded-lg shadow-md p-1">
+        <p class="flex flex-col gap-1">
+          <app-conteudo-visivel [visivel]="true"
+            class="bg-grayCustom-200 w-full h-12 rounded flex justify-center items-center"></app-conteudo-visivel>
+          <app-conteudo-visivel [visivel]="false"
+            class="bg-grayCustom-200 w-full h-12 rounded flex justify-center items-center"></app-conteudo-visivel>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
