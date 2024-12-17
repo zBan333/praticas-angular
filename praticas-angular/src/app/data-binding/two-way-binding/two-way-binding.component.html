@@ -9,12 +9,12 @@
       <h4 class="text-xl font-medium">
         Pratica 13: Texto Dinamico
       </h4>
-      <div class="w-full border-2 border-solid border-grayCustom-200 rounded-lg shadow-lg p-1 flex flex-col gap-1">
+      <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-lg border-grayCustom-200">
         <input [(ngModel)]="textStart"
-               class="w-full h-12 border-2 border-solid border-grayCustom-100 rounded outline-grayCustom-200 p-2"
+               class="w-full h-12 p-2 border-2 border-solid rounded border-grayCustom-100 outline-grayCustom-200"
                placeholder="Digite um texto"
         />
-        <p class="w-full h-12 flex justify-center items-center rounded bg-grayCustom-100">
+        <p class="flex items-center justify-center w-full h-12 rounded bg-grayCustom-100">
           {{ textStart }}
         </p>
       </div>
@@ -24,14 +24,14 @@
       <h4 class="text-xl font-medium">
         Pratica 14: controle de tamanho de fonte
       </h4>
-      <div class="w-full border-2 border-solid border-grayCustom-200 rounded-lg shadow-lg p-1 flex flex-col gap-1">
+      <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-lg border-grayCustom-200">
         <input [(ngModel)]="fontSize"
-               class="w-full h-11 border-2 border-solid border-grayCustom-100 outline-none focus:border-grayCustom-200 rounded p-1"
+               class="w-full p-1 border-2 border-solid rounded outline-none h-11 border-grayCustom-100 focus:border-grayCustom-200"
                placeholder="Digite um numero"
                type="number"
         />
         <p [style.fontSize.px]="fontSize"
-           class="w-full h-11 bg-grayCustom-100 hover:bg-grayCustom-200 rounded font-medium flex justify-center items-center">
+           class="flex items-center justify-center w-full font-medium rounded h-11 bg-grayCustom-100 hover:bg-grayCustom-200">
           Texto com tanho dinamico
         </p>
       </div>
@@ -41,35 +41,35 @@
       <h4 class="text-xl font-medium">
         pratica 15: modo escuro/claro
       </h4>
-      <div class="w-full border-2 border-solid border-grayCustom-200 rounded-lg shadow-lg p-1 flex flex-col gap-1">
-        <div class="w-full h-11 flex items-center">
+      <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-lg border-grayCustom-200">
+        <div class="flex items-center w-full h-11">
           <input [(ngModel)]="isDarkMode"
-                 class="size-6 border-2 border-solid border-grayCustom-100 focus:border-grayCustom-200 outline-none"
+                 class="border-2 border-solid outline-none size-6 border-grayCustom-100 focus:border-grayCustom-200"
                  id="checkBox"
                  type="checkbox"
           />
-          <label class="font-medium text-base ml-1"
+          <label class="ml-1 text-base font-medium"
                  for="checkBox">
             Modo Escuro
           </label>
         </div>
         <p [class.dark-mode]="isDarkMode" [class.light-mode]="!isDarkMode"
-           class="w-full h-11 rounded text-lg font-medium flex justify-center items-center">
+           class="flex items-center justify-center w-full text-lg font-medium rounded h-11">
           o modo atual é: {{ isDarkMode ? 'Escuro' : 'claro' }}
         </p>
       </div>
     </div>
 
     <div class="pratica16">
-      <h4 class="font-medium text-xl">
+      <h4 class="text-xl font-medium">
         Pratica 16: Ajuste de Valor de input range
       </h4>
-      <div class="w-full border-2 border-solid border-grayCustom-200 rounded-lg shadow-lg p-1">
-        <div class="w-full h-11 flex justify-center items-center">
+      <div class="w-full p-1 border-2 border-solid rounded-lg shadow-lg border-grayCustom-200">
+        <div class="flex items-center justify-center w-full h-11">
           <input [(ngModel)]="valorRange"
                  class="w-96" max="100" min="0" type="range">
         </div>
-        <div class="w-full h-11 bg-grayCustom-200 rounded flex justify-center items-center text-lg font-medium">
+        <div class="flex items-center justify-center w-full text-lg font-medium rounded h-11 bg-grayCustom-200">
           valor do range é: {{ valorRange }}
         </div>
       </div>

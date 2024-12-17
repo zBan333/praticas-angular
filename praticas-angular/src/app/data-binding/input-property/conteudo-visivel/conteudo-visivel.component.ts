@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './conteudo-visivel.component.scss'
 })
 export class ConteudoVisivelComponent {
-  @Input() visivel: boolean = false
+  @Input() visivel: boolean = false;
 }

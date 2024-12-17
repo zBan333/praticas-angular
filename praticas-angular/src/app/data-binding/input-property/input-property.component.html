@@ -1,26 +1,26 @@
 <div class="w-full">
-  <h2 class="font-medium text-2xl flex justify-start">
+  <h2 class="flex justify-start text-2xl font-medium">
     Input Property
   </h2>
 
-  <div class="p-4 grid grid-cols-2 gap-10">
+  <div class="grid grid-cols-2 gap-10 p-4">
 
     <div class="pratica17">
-      <h4 class="font-medium text-xl">
+      <h4 class="text-xl font-medium">
         Pratica 17: Texto com input Property
       </h4>
-      <div class="flex items-center w-full h-24 border-2 border-solid border-grayCustom-200 shadow-md rounded-lg">
+      <div class="flex items-center w-full h-24 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
         <app-text-display [text]="'Texto com input property'"
-        class="w-full h-24 flex justify-center items-center">
+        class="flex items-center justify-center w-full h-24">
       </app-text-display>
       </div>
     </div>
 
     <div class="pratica18">
-      <h4 class="font-medium text-xl">
+      <h4 class="text-xl font-normal md:font-medium">
         pratica 18: Alterando background
       </h4>
-      <div class="w-full h-24 border-2 border-solid border-grayCustom-200 rounded-lg shadow-md flex flex-col gap-1 p-1">
+      <div class="flex flex-col w-full h-24 gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
         <div class="w-full h-12 rounded">
           <app-background [background]="'blue'"></app-background>
         </div>
@@ -31,25 +31,25 @@
     </div>
 
     <div class="pratica19">
-      <h4 class="font-medium text-xl">
-        Exibir Lista de Itens
+      <h4 class="text-xl font-medium">
+        Pratica 19: Exibindo Lista de Itens
       </h4>
-      <div class="w-full  border-2 border-solid border-grayCustom-200 rounded-lg shadow-md">
+      <div class="w-full border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
         <app-item-list [items]="['Item 1','Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6']">
         </app-item-list>
       </div>
     </div>
 
     <div class="pratica20">
-      <h4 class="font-medium text-xl">
-        Controlar Visibilidade
+      <h4 class="text-xl font-medium">
+        Pratica 20: Controlando Visibilidade
       </h4>
-      <div class="w-full border-2 border-solid border-grayCustom-200 rounded-lg shadow-md p-1">
+      <div class="w-full p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
         <p class="flex flex-col gap-1">
           <app-conteudo-visivel [visivel]="true"
-            class="bg-grayCustom-200 w-full h-12 rounded flex justify-center items-center"></app-conteudo-visivel>
+            class="flex items-center justify-center w-full h-12 rounded bg-grayCustom-200"></app-conteudo-visivel>
           <app-conteudo-visivel [visivel]="false"
-            class="bg-grayCustom-200 w-full h-12 rounded flex justify-center items-center"></app-conteudo-visivel>
+            class="flex items-center justify-center w-full h-12 rounded bg-grayCustom-200"></app-conteudo-visivel>
         </p>
       </div>
     </div>

@@ -11,6 +11,10 @@ import { TextDisplayComponent } from './input-property/text-display/text-display
 import { BackgroundComponent } from './input-property/background/background.component';
 import { ItemListComponent } from './input-property/item-list/item-list.component';
 import { ConteudoVisivelComponent } from './input-property/conteudo-visivel/conteudo-visivel.component';
+import { OutputPropertyComponent } from './output-property/output-property.component';
+import { BotaoContadorComponent } from './output-property/botao-contador/botao-contador.component';
+import { EmitirTextoComponent } from './output-property/emitir-texto/emitir-texto.component';
+import { VisibleComponentComponent } from './output-property/visible-component/visible-component.component';
 
 
 
@@ -26,6 +30,10 @@ import { ConteudoVisivelComponent } from './input-property/conteudo-visivel/cont
     BackgroundComponent,
     ItemListComponent,
     ConteudoVisivelComponent,
+    OutputPropertyComponent,
+    BotaoContadorComponent,
+    EmitirTextoComponent,
+    VisibleComponentComponent,
   ],
   imports: [
     CommonModule,
