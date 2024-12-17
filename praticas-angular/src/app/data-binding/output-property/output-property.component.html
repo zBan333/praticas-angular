@@ -1,0 +1,57 @@
+<div class="w-full">
+  <h2 class="flex justify-start text-2xl font-medium">
+    OutPut Property
+  </h2>
+
+  <div class="grid grid-cols-2 gap-10 p-4">
+
+    <div class="pratica21">
+      <h4 class="text-lg font-medium">
+        Pratica 21: Botao contador
+      </h4>
+      <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+        <p class="flex items-center justify-center w-full h-12 text-xl font-medium rounded bg-grayCustom-100">
+          {{ valor }}
+        </p>
+        <app-botao-contador (contador)="valorAtualizado($event)"></app-botao-contador>
+      </div>
+    </div>
+
+    <div class="pratica22">
+      <h4 class="text-lg font-medium">
+        pratica 22: enviando texto digitado
+      </h4>
+      <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+        <app-enviando-texto (textoEmitido)="atulizarTexto($event)"></app-enviando-texto>
+        <p class="flex items-center justify-center w-full h-12 rounded bg-grayCustom-200">
+          {{ text }}
+        </p>
+      </div>
+    </div>
+
+    <div class="pratica23">
+      <h4 class="text-lg font-medium">
+        Pratica 23: Alterando visibilidade
+      </h4>
+      <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+        <p class="flex items-center justify-center w-full h-12 rounded bg-grayCustom-100"
+          *ngIf="isConteudoVisivel">
+          Conteudo Visivel!
+        </p>
+        <app-alternar-visibilidade (visibilidade)="conteudoVisivel($event)"></app-alternar-visibilidade>
+      </div>
+    </div>
+
+    <div class="pratica23">
+      <h4 class="text-lg font-medium">
+        Pratica 24: notificação de Ação
+      </h4>
+      <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md h24 border-grayCustom-200">
+        <p class="flex items-center justify-center w-full h-12 font-medium rounded bg-grayCustom-100">
+          {{ notification }}
+        </p>
+        <app-acao-notificacao (emitNotification)="showNotification($event)"></app-acao-notificacao>
+      </div>
+    </div>
+  </div>
+</div>

@@ -13,8 +13,9 @@ import { ItemListComponent } from './input-property/item-list/item-list.componen
 import { ConteudoVisivelComponent } from './input-property/conteudo-visivel/conteudo-visivel.component';
 import { OutputPropertyComponent } from './output-property/output-property.component';
 import { BotaoContadorComponent } from './output-property/botao-contador/botao-contador.component';
-import { EmitirTextoComponent } from './output-property/emitir-texto/emitir-texto.component';
-import { VisibleComponentComponent } from './output-property/visible-component/visible-component.component';
+import { EnviandoTextoComponent } from './output-property/enviando-texto/enviando-texto.component';
+import { AlternarVisibilidadeComponent } from './output-property/alternar-visibilidade/alternar-visibilidade.component';
+import { AcaoNotificacaoComponent } from './output-property/acao-notificacao/acao-notificacao.component';
 
 
 
@@ -32,8 +33,9 @@ import { VisibleComponentComponent } from './output-property/visible-component/v
     ConteudoVisivelComponent,
     OutputPropertyComponent,
     BotaoContadorComponent,
-    EmitirTextoComponent,
-    VisibleComponentComponent,
+    EnviandoTextoComponent,
+    AlternarVisibilidadeComponent,
+    AcaoNotificacaoComponent,
   ],
   imports: [
     CommonModule,
