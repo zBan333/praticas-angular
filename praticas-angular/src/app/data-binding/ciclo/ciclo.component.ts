@@ -1,4 +1,4 @@
-import { Component, OnChanges, OnInit, SimpleChanges, Input, OnDestroy } from '@angular/core';
+import { Component, OnChanges, OnInit, SimpleChanges, Input, OnDestroy, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-ciclo',
@@ -7,27 +7,29 @@ import { Component, OnChanges, OnInit, SimpleChanges, Input, OnDestroy } from '@
   templateUrl: './ciclo.component.html',
   styleUrl: './ciclo.component.scss'
 })
-export class CicloComponent implements OnInit, OnChanges, OnDestroy {
+export class CicloComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy {
 
   @Input() inputValue: string = '';
+
+  @ViewChild('tituloElemento') campoValorTitulo!: ElementRef;
 
   message: string = '';
 
   previousValue: string = '';
 
   contador: number = 0;
-  intervalId
+  intervalId: any
 
   constructor() {
     this.intervalId = setInterval(() => {
       this.contador++;
-    }, 1000)
+    }, 1000);
+    console.log(this.intervalId);
   }
 
   stopCounter() {
     clearInterval(this.intervalId);
     console.log('Contador parado manualmente');
-
   }
 
   ngOnInit(){
@@ -39,6 +41,11 @@ export class CicloComponent implements OnInit, OnChanges, OnDestroy {
     if (changes['inputValue']){
       this.previousValue = changes['inputValue'].previousValue || '';
     }
+  }
+
+  ngAfterViewInit() {
+    this.campoValorTitulo.nativeElement.style.color = 'red';
+    this.campoValorTitulo.nativeElement.style.fontSize = '18px';
   }
 
   ngOnDestroy() {

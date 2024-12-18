@@ -1,0 +1,61 @@
+<div class="w-full">
+  <h2 class="flex justify-start text-2xl font-medium">
+    ViewChild
+  </h2>
+
+  <div class="grid grid-cols-2 gap-10 p-4">
+
+    <div id="pratica29">
+      <h4 class="text-xl font-medium">
+        Pratica 29: controlando elemento
+      </h4>
+      <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+        <p class="flex items-center justify-center w-full h-12 text-lg" #paragrafoTexto>Texto Inicial</p>
+        <button (click)="mudarTexto()"
+        class="w-full h-12 transition-all duration-150 rounded bg-grayCustom-100 hover:bg-grayCustom-200 active:bg-grayCustom-300">
+          Mudar Texto
+        </button>
+      </div>
+    </div>
+
+    <div id="pratica30">
+      <h4 class="text-xl font-medium">
+        Pratica 30: Focar em um Input
+      </h4>
+      <div class="flex flex-col w-full gap-1 p-2 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+        <input #focarInput
+        type="text"
+        placeholder="Auto foco no Input"
+        class="h-12 p-1 border-2 border-solid rounded border-grayCustom-200 outline-grayCustom-500">
+      </div>
+    </div>
+
+    <div id="pratica31">
+      <h4 class="text-xl font-medium">
+        Pratica 31: Acessando um Componente Filho
+      </h4>
+      <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+        <p class="flex items-center justify-center w-full h-12">
+          Propriedade do filho:
+          <span class="pl-1 text-grayCustom-700">
+            {{ tituloFilho }}
+          </span>
+        </p>
+        <app-componente-filho01></app-componente-filho01>
+      </div>
+    </div>
+
+    <div id="pratica32">
+      <h4 class="text-xl font-medium">
+        Pratica 32: chamando metodo
+      </h4>
+      <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+        <app-componente-filho01></app-componente-filho01>
+        <button (click)="chamarFilho()"
+         class="w-full h-12 transition-all duration-150 rounded bg-grayCustom-100 hover:bg-grayCustom-200 active:bg-grayCustom-300">
+         Chamar metodo do filho
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -17,6 +17,8 @@ import { EnviandoTextoComponent } from './output-property/enviando-texto/enviand
 import { AlternarVisibilidadeComponent } from './output-property/alternar-visibilidade/alternar-visibilidade.component';
 import { AcaoNotificacaoComponent } from './output-property/acao-notificacao/acao-notificacao.component';
 import { CicloComponent } from './ciclo/ciclo.component';
+import { ViewchildComponent } from './viewchild/viewchild.component';
+import { ComponenteFilho01Component } from './viewchild/componente-filho01/componente-filho01.component';
 
 
 
@@ -38,6 +40,8 @@ import { CicloComponent } from './ciclo/ciclo.component';
     AlternarVisibilidadeComponent,
     AcaoNotificacaoComponent,
     CicloComponent,
+    ViewchildComponent,
+    ComponenteFilho01Component,
   ],
   imports: [
     CommonModule,
