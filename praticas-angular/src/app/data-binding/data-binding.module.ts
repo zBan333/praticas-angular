@@ -16,6 +16,7 @@ import { BotaoContadorComponent } from './output-property/botao-contador/botao-c
 import { EnviandoTextoComponent } from './output-property/enviando-texto/enviando-texto.component';
 import { AlternarVisibilidadeComponent } from './output-property/alternar-visibilidade/alternar-visibilidade.component';
 import { AcaoNotificacaoComponent } from './output-property/acao-notificacao/acao-notificacao.component';
+import { CicloComponent } from './ciclo/ciclo.component';
 
 
 
@@ -36,6 +37,7 @@ import { AcaoNotificacaoComponent } from './output-property/acao-notificacao/aca
     EnviandoTextoComponent,
     AlternarVisibilidadeComponent,
     AcaoNotificacaoComponent,
+    CicloComponent,
   ],
   imports: [
     CommonModule,

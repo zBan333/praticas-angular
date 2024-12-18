@@ -1,0 +1,74 @@
+<div class="w-full">
+  <h2 class="flex justify-start text-2xl font-medium">
+    Ciclo de vida do Componente
+  </h2>
+
+  <div class="grid grid-cols-2 gap-10 p-4">
+
+    <div id="pratica25">
+      <h4 class="text-xl font-medium">
+        pratica 25: ngOnInit
+      </h4>
+      <div class="w-full p-4 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+        <h4 class="flex justify-center w-full text-lg underline h-11">Exemplo com ngOnInit</h4>
+        <p class="w-full text-base h-11 text-grayCustom-700">
+          Mensagem inicializada:
+          <br>
+          <span class="text-sm text-grayCustom-500">
+            {{ message }}
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div id="pratica26">
+      <h4 class="text-xl font-medium">
+        Pratica 26: ngOnChanges
+      </h4>
+      <div class="w-full p-4 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+        <h4>
+          Exemplo com ngOnChanges
+        </h4>
+        <input [(ngModel)]="inputValue"
+        placeholder="Digite algo"
+          class="w-full p-1 mt-1 mb-1 border-2 border-solid rounded border-grayCustom-200 outline-grayCustom-300">
+        <p>Valor atual: {{ inputValue }}</p>
+        <p *ngIf="previousValue">Valor anterior: {{ previousValue }}</p>
+      </div>
+    </div>
+
+    <div id="prativa27">
+      <h4 class="text-xl font-medium">
+        Pratica 27: ngAfterViewInit
+      </h4>
+      <div class="w-full p-4 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+        <h4 class="flex justify-center w-full underline h-11"
+          #tituloElemento>
+          Exemplo com ngAfterViewInit
+        </h4>
+        <p class="text-sm text-grayCustom-500">O título acima foi estilizado dinamicamente no ciclo de vida.</p>
+        <p>codigo do caralho(nao consegui nem com IA)</p>
+      </div>
+    </div>
+
+    <div id="pratica28">
+      <h4 class="text-xl font-medium">
+        Pratica 28: ngOnDestroy
+      </h4>
+      <div class="w-full p-4 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+        <h4 class="flex justify-center w-full h-10">
+          Exemplo de ngOnDestroy
+        </h4>
+        <div class="flex flex-col gap-1">
+          <p class="p-2 text-sm rounded bg-grayCustom-100">
+            tempo decorrido: {{ contador }} segundos
+          </p>
+          <button (click)="stopCounter()"
+            class="w-full p-2 text-sm rounded bg-grayCustom-100">
+            parar contador
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
