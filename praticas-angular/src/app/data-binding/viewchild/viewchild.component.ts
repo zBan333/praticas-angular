@@ -18,6 +18,8 @@ export class ViewchildComponent implements AfterViewInit{
 
   tituloFilho: string = '';
 
+
+
   mudarTexto(){
     this.textoParagrafo.nativeElement.textContent = 'Texto Mudado';
   }

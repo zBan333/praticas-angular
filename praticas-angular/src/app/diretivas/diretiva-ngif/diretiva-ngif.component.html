@@ -1,0 +1,61 @@
+<div class="w-full">
+  <h2 class="flex text-2xl font-medium justify-startS">
+    Diretiva ngIf
+  </h2>
+  <div class="grid grid-cols-2 gap-10 p-4">
+
+    <div id="pratica33">
+      <h4 class="text-xl font-medium">
+        Pratica 33: Parágrafo Condicionalmente
+      </h4>
+      <div class="w-full p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+        <p class="flex items-center justify-center w-full h-12 p-1"
+        *ngIf="mostrarTexto">
+          textto visivel quando o botao for true
+      </p>
+        <button class="w-full h-12 p-1 transition-all duration-150 rounded bg-grayCustom-100 hover:bg-grayCustom-200 active:bg-grayCustom-300"
+        (click)="onMostrarTexto()">
+          Mostrar ou Ocultar
+      </button>
+      </div>
+    </div>
+
+    <div id="pratica34">
+      <h4 class="text-xl font-medium">Pratica 34: Exibindo um Input</h4>
+      <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+        <input type="text"
+        *ngIf="mostrarInput"
+        class="w-full h-12 p-1 border-2 border-solid rounded border-grayCustom-200 outline-grayCustom-500"
+        placeholder="Digite algo">
+        <button class="w-full h-12 transition-all duration-150 rounded bg-grayCustom-100 hover:bg-grayCustom-200 active:bg-grayCustom-300"
+        (click)="onChangeInput()">
+          Mostrar/Ocultar Input
+        </button>
+      </div>
+    </div>
+
+    <div id="pratica25">
+      <h4 class="text-xl font-medium">Pratica 35: Exibindo um Componente Filho Condicionalmente</h4>
+      <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+        <app-filho *ngIf="showChild"></app-filho>
+        <button (click)="onChangeChild()"
+        class="w-full h-12 transition-all duration-150 rounded bg-grayCustom-100 hover:bg-grayCustom-200 active:bg-grayCustom-300">
+          Mostrar/Ocultar Filho
+        </button>
+      </div>
+    </div>
+
+    <div id="pratica 36">
+      <h4 class="text-xl font-medium">Pratica 36: Exibindo um Bloco de Informações</h4>
+      <div class="flex flex-col w-full gap-1 p-1 border-2 border-solid rounded-lg shadow-md border-grayCustom-200">
+        <button (click)="onChangeInfo()"
+        class="w-full h-12 transition-all duration-150 rounded bg-grayCustom-100 hover:bg-grayCustom-200 active:bg-grayCustom-300">
+          Mostrar/Ocultar Bloco de Informações
+        </button>
+        <div *ngIf="ShowInfo">
+          <p class="flex items-center justify-center w-full h-12 rounded bg-grayCustom-100">Este é um bloco de informação exibido Condicionalmente</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
